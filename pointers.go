@@ -4,13 +4,12 @@ import "fmt"
 
 func main() {
 	x := 10
-	p := &x // p - указатель на переменную x, хранящий ее адрес
-
 	fmt.Println("Значение x:", x)
-	fmt.Println("Адрес х:", p)
-	fmt.Println("Значение *p:", *p)
 
-	*p = 15
+	increment(&x)
+	fmt.Println("Значение х после вызова функции inctement()", x)
+}
 
-	fmt.Println("Значение х после изменения *p:", x)
+func increment(p *int) {
+	*p += 1
 }
