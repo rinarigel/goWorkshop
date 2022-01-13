@@ -5,15 +5,14 @@ import (
 )
 
 func main() {
-	var todoList = [...]string{
-		"купить хлеб",
-		"купить то-то",
-		"сделать то-то",
-		"сходить туда-то",
-	}
-	fmt.Printf("Кол-во элементов в списке: %d\n", len(todoList))
+	var todoList = [3]string{"купить хлеб"}
 
-	for index, item := range todoList {
-		fmt.Printf("%d. %s\n", index, item)
+	todoList[1] = "купить молоко"
+	todoList[2] = "купить пиво"
+
+	fmt.Printf("К-во элементов в списке: %d\n", len(todoList))
+
+	for _, item := range todoList {
+		fmt.Printf("%s\n", item)
 	}
 }
