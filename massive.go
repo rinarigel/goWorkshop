@@ -5,13 +5,15 @@ import (
 )
 
 func main() {
-	i := 0
-	for {
-		if i == 100 {
-			break
-		}
+	var arr [3]int
+	arr = fillArray(arr)
+	fmt.Println(arr)
+}
 
-		fmt.Println(i)
-		i++
+func fillArray(arr [3]int) [3]int {
+	for i := 0; i < len(arr); i++ {
+		arr[i] = i
 	}
+
+	return arr
 }
